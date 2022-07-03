@@ -4,7 +4,8 @@ const { Builder } = require('selenium-webdriver');
 const firefox = require('selenium-webdriver/firefox');
 
 async function main() {
-  let options = new firefox.Options();
+  let options = new firefox.Options().headless();
+  
   let driver = await new Builder()
     .forBrowser('firefox')
     .setSafariOptions(options)
