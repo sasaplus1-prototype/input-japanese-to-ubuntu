@@ -16,6 +16,8 @@ jobs:
       - run: yarn install --frozen-lockfile
     # - run: sudo safaridriver --enable
       - run: node index.js
+        env:
+          PATH: ${{ env.CHROMEWEBDRIVER }}:${{ env.GECKOWEBDRIVER }}:${{ env.PATH }}
       - uses: actions/upload-artifact@v3
         with:
           path: ./image.png
