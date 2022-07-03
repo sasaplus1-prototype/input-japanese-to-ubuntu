@@ -15,7 +15,7 @@ async function main() {
   await driver.findElement(By.id('editor')).click();
   await driver.findElement(By.id('editor')).sendKeys('Hello, World!');
   await driver.findElement(By.id('editor')).sendKeys(Key.ENTER);
-  await deiver.findElement(By.id('editor')).sendKeys(Key.chord('\uE040'));
+  await driver.findElement(By.id('editor')).sendKeys(Key.chord('\uE040'));
   await driver.findElement(By.id('editor')).sendKeys('konnnitiwa');
 
   let encodedString = await driver.takeScreenshot();
