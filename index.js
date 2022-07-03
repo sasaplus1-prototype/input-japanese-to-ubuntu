@@ -12,7 +12,7 @@ async function main() {
 
   await driver.get('https://d-toybox.com/studio/lib/input_event_viewer.html');
 
-  await driver.findElement(By.id('editor').sendKeys('Hello, World!'));
+  await driver.findElement(By.id('editor')).sendKeys('Hello, World!');
 
   let encodedString = await driver.takeScreenshot();
   await fs.writeFileSync('./image.png', encodedString, 'base64');
