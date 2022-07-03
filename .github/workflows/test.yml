@@ -17,7 +17,7 @@ jobs:
       - run: echo "PATH=$CHROMEWEBDRIVER:$PATH" >> "$GITHUB_ENV"
       - run: echo "PATH=$GECKOWEBDRIVER:$PATH" >> "$GITHUB_ENV"
     # - run: sudo safaridriver --enable
-      - run: node index.js
+      - run: xvfb-run node index.js
       - uses: actions/upload-artifact@v3
         with:
           path: ./image.png
