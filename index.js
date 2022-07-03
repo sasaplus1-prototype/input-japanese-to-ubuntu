@@ -1,13 +1,12 @@
 const fs = require('fs');
 
 const { Builder } = require('selenium-webdriver');
-const firefox = require('selenium-webdriver/firefox');
+const chrome = require('selenium-webdriver/chrome');
 
 async function main() {
-  let options = new firefox.Options().headless();
-  
+  let options = new chrome.Options();
   let driver = await new Builder()
-    .forBrowser('firefox')
+    .forBrowser('chrome')
     .setSafariOptions(options)
     .build();
 
